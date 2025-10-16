@@ -48,21 +48,19 @@
     }
 
     .header-title img {
-      height: 65px;
-      margin-right: 12px;
+      height: 55px; /* Tamaño para la nueva imagen */
+      margin-right: 10px;
     }
 
+    /* 🔹 OCULTAMOS EL TEXTO SIAT */
     .siat-text {
-      font-size: var(--siat-size);
-      text-transform: uppercase;
-      font-family: var(--siat-font);
-      letter-spacing: 1px;
+      display: none; /* Oculta el texto SIAT */
     }
 
     .toggle-mode {
       background: transparent;
       border: none;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       color: white;
       cursor: pointer;
       filter: brightness(0) invert(1);
@@ -109,8 +107,8 @@
     }
 
     .icono {
-      width: 50px;
-      height: 50px;
+      width: 45px;
+      height: 45px;
       margin-right: 12px;
       object-fit: contain;
     }
@@ -133,14 +131,14 @@
       color: #555;
     }
 
-    /* BOTÓN - MÁS DELGADO */
+    /* BOTÓN */
     .btn {
       background-color: var(--btn-color);
       color: white;
       border: none;
-      padding: 10px 14px; /* 🔹 Reducido el padding vertical */
+      padding: 14px;
       width: 100%;
-      border-radius: 10px; /* 🔹 Bordes ligeramente menos redondeados */
+      border-radius: 12px;
       font-size: 0.95rem;
       font-weight: 600;
       cursor: pointer;
@@ -149,7 +147,6 @@
       justify-content: center;
       margin-top: 18px;
       transition: background 0.2s ease;
-      height: 44px; /* 🔹 Altura fija más delgada */
     }
 
     .btn:hover {
@@ -157,8 +154,8 @@
     }
 
     .btn img {
-      width: 22px;
-      height: 22px;
+      width: 18px;
+      height: 18px;
       margin-right: 8px;
     }
 
@@ -167,19 +164,8 @@
         margin: 15px;
         max-width: 90%;
       }
-      .siat-text {
-        font-size: 2.3rem;
-      }
       .header-title img {
-        height: 60px;
-      }
-      .icono {
-        width: 48px;
-        height: 48px;
-      }
-      .btn {
-        height: 42px; /* 🔹 Altura para móviles */
-        padding: 9px 14px;
+        height: 50px; /* Tamaño para móviles */
       }
     }
   </style>
@@ -189,8 +175,13 @@
   <!-- ENCABEZADO -->
   <div class="header">
     <div class="header-title">
-      <img src="LOGOTIPO.jpg" alt="Logo SIAT" />
-      <span class="siat-text">SIAT</span>
+      <!-- 🔹 AQUÍ COLOCAS TU IMAGEN COMPLETA -->
+      <img src="logotipo.jpeg" alt="SIAT" />
+      <!-- 
+        Reemplaza "logo-completo-siat.jpg" con el nombre de tu imagen
+        Esta imagen debe incluir el logo y el texto "SIAT" juntos
+      -->
+      <span class="siat-text">SIAT</span> <!-- Este texto está oculto -->
     </div>
     <button class="toggle-mode" onclick="toggleDarkMode()">🌛</button>
   </div>
@@ -210,7 +201,7 @@
       <img src="usuario.jpeg" class="icono" alt="Razón social" />
       <div class="dato-texto">
         <div class="dato-label">Razón Social</div>
-        <div class="dato-value">MARCELINA CHURATA YA...</div>
+        <div class="dato-value">LUIS ENRIQUE LOPEZ TORREZ</div>
       </div>
     </div>
 
@@ -218,7 +209,7 @@
       <img src="papel.jpeg" class="icono" alt="NIT" />
       <div class="dato-texto">
         <div class="dato-label">NIT</div>
-        <div class="dato-value">2591712017</div>
+        <div class="dato-value">2282941011</div>
       </div>
     </div>
 
@@ -234,7 +225,7 @@
       <img src="moneda.jpeg" class="icono" alt="Monto" />
       <div class="dato-texto">
         <div class="dato-label">Monto Total Bs.</div>
-        <div class="dato-value">11990</div>
+        <div class="dato-value">2774.02</div>
       </div>
     </div>
 
@@ -250,7 +241,7 @@
       <img src="maleta.jpeg" class="icono" alt="Fecha" />
       <div class="dato-texto">
         <div class="dato-label">Fecha Pago</div>
-        <div class="dato-value">09/10/2025</div>
+        <div class="dato-value">07/07/2025</div>
       </div>
     </div>
 
@@ -276,7 +267,7 @@
     }
 
     function abrirPDF() {
-      window.open('compropdf.pdf', '_blank');
+      window.open('compropfd.pdf', '_blank');
     }
   </script>
 </body>
